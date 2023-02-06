@@ -18,6 +18,10 @@ The following properties can be used, alongside the default values:
 
 
 
+https://user-images.githubusercontent.com/870788/217051507-ebb8dd5c-8dc2-467c-8d6e-7ed2b7347787.mp4
+
+
+
 
 
 ### Installation
