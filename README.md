@@ -16,6 +16,8 @@ The following properties can be used, alongside the default values:
 
 
 
+<video src="sync.mp4" muted loop autostart></video>
+
 
 
 ### Installation
@@ -44,7 +46,7 @@ import SlashdWire from '@slashd/wire'
 
 ### API
 
-To implement such synching capability, your component needs to implement some methods of the library, that are:
+To implement such syncing capability, your component needs to implement some methods of the library, that are:
 
 - `SlashdWire.add` to add a component into the library
 - `SlashdWire.send` to send a specific event with payload in broadcast
