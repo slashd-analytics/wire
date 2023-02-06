@@ -16,7 +16,7 @@ The following properties can be used, alongside the default values:
 
 
 
-<video src="sync.mp4" muted loop autostart></video>
+
 
 
 
