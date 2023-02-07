@@ -1,12 +1,12 @@
 # Wire
 
-**Wire** is a tiny library that allows different components communicate to each others by using a little event broadcaster.
+**Wire** is a tiny library that allows to instances of a component to communicate to each others by using a little event broadcaster.
 
-The main purpose is to add syncing capability to specific components, with the possibility to include/exclude some instances in the overall sync flow.
+The main purpose is to add syncing capability to specific instances, with the possibility to include/exclude some of them in the overall sync flow.
 
-Each component can be configured in order to orchestrate how the signals flow from one component to the others.
+Each instance can be configured in order to orchestrate how the signals flow from one to the others.
 
-By default every component send messages to others that subscribe to a specific event type.
+By default every instance sends messages to others that subscribe to the same event type.
 
 The following properties can be used, alongside the default values:
 - `wireSenderEnabled: true ` enable/disable the ability of a specific component to send events
@@ -52,7 +52,7 @@ import SlashdWire from '@slashd/wire'
 
 To implement such syncing capability, your component needs to implement some methods of the library, that are:
 
-- `SlashdWire.add` to add a component into the library
+- `SlashdWire.add` to add a the instance into the broadcaster
 - `SlashdWire.send` to send a specific event with payload in broadcast
 - `SlashdWire.on` to subscribe a specific event in order to receive a payload
 
@@ -62,7 +62,7 @@ The only requirement is an UID per each component
 
 Additional methods are:
 
-- `SlashdWire.remove ` to remove a component from the broadcaster
+- `SlashdWire.remove ` to remove an instance from the broadcaster
 - `SlashdWire.off` to unsubscribe from an event
 
 Here a minimal component that implements the required methods:
@@ -99,6 +99,10 @@ new Comp()
 new Comp()
 new Comp()
 ```
+
+The library is responsible to handle the messages between instances only. What should happen on each event received it's up to you.
+
+
 
 
 
