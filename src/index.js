@@ -1,7 +1,22 @@
 const clients = []
 const listeners = {}
 
+const def = {
+    wireSenderEnabled:true,
+    wireSenderName:'',
+    wireReceiverAllowed: [],
+    wireReceiverEnabled:true
+}
+
 const add = client => {
+    if(!client.uid){
+        console.warn('uid missing in client config')
+    }
+    for(const k in def){
+        if(!client.hasOwnProperty(k)){
+            client[k] = def[k]
+        }
+    }
     clients.push(client)
 }
 
