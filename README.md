@@ -20,6 +20,12 @@ The following properties can be used, alongside the default values:
 
 https://user-images.githubusercontent.com/870788/217051507-ebb8dd5c-8dc2-467c-8d6e-7ed2b7347787.mp4
 
+This is another example:
+
+
+
+
+https://user-images.githubusercontent.com/870788/218159272-3c773ab2-c262-4b5b-9752-2d24451695ea.mp4
 
 
 
@@ -35,7 +41,7 @@ npm install @slashd/wire
 Then, use it in the browser:
 
 ```html
-<script src="node_modules/dist/slashd-wire.min.js"></script>
+<script src="node_modules/@slashd/wire/dist/slashd-wire.min.js"></script>
 ```
 
 or with ES6 in a module or within a bundler:
