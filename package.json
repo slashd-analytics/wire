@@ -29,15 +29,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.19.3",
-    "@babel/preset-env": "^7.19.4",
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
     "@rollup/plugin-babel": "^6.0.0",
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-terser": "^0.4.0",
-    "browser-sync": "^2.27.11",
-    "eslint": "^8.33.0",
-    "rollup": "^3.2.3",
-    "standard": "^17.0.0"
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "browser-sync": "^2.29.3",
+    "eslint": "^8.49.0",
+    "rollup": "^3.29.2",
+    "standard": "^17.1.0"
   }
 }
