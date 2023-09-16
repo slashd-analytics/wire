@@ -1,5 +1,6 @@
 # Wire
 
+
 **Wire** is a tiny library that allows to instances of a component to communicate to each others by using a little event broadcaster.
 
 The main purpose is to add syncing capability to specific instances, with the possibility to include/exclude some of them in the overall sync flow.
