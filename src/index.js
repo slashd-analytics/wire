@@ -1,5 +1,6 @@
 const clients = []
 const listeners = {}
+let dispatcher
 
 const def = {
     wireSenderEnabled:true,
@@ -18,6 +19,17 @@ const add = client => {
         }
     }
     clients.push(client)
+
+    if(client.broadcast){
+        dispatcher = new BroadcastChannel(client.broadcast)
+
+        dispatcher.addEventListener('message', event => { 
+            const { data } = event || {}
+            const { senderEvent } = data || {}
+            const { clb } = listeners[client.uid + '__' + senderEvent]
+            clb(data)
+        })
+    }
 }
 
 const remove = client => {
@@ -30,6 +42,10 @@ const send = (senderEvent, payload) => {
 
     // sender is not allowed to send
     if( !sender.wireSenderEnabled ) return 
+
+    if(dispatcher){
+        dispatcher.postMessage({...payload, senderEvent})
+    }
 
     for(const lkey in listeners){
         

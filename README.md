@@ -108,7 +108,9 @@ new Comp()
 
 The library is responsible to handle the messages between instances only. What should happen on each event received it's up to you.
 
+#### Use Broadcast Channel
 
+When you add a client, you can pass an optional parameter `broadcast` with a string value which is the `BroadcastChannel` name to allow cross communication between same-origin iframes.
 
 
 
